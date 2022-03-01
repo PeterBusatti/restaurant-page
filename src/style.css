@@ -4,7 +4,9 @@
 }
 
 :root {
-    --accent-color: #3BEDCB;
+    --accent-color: #18F58C;
+    --main-bg-color: #C25100;
+    --hf-bg-color: #F5AC18;
 }
 
 .content{
@@ -20,7 +22,7 @@
     position: relative;
     width: inherit;
     height: 50px;
-    background-color: #EB6300;
+    background-color: var(--hf-bg-color);
 
     display: flex;
     justify-content: center;
@@ -90,7 +92,7 @@
 .main {
     flex: 1;
 
-    background-color: #B88112;
+    background-color: var(--main-bg-color);
     width: inherit;
     text-align: center;
 }
