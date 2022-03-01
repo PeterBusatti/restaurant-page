@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+:root {
+    --accent-color: #3BEDCB;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -16,7 +20,7 @@
     position: relative;
     width: inherit;
     height: 50px;
-    background-color: aqua;
+    background-color: #EB6300;
 
     display: flex;
     justify-content: center;
@@ -54,6 +58,7 @@
 .footer > div {
     height: 80%;
     width: 40px;
+    border-radius: 30%;
 }
 
 .tab:hover, .footer > div:hover {
@@ -72,14 +77,20 @@
     background: url(./twitter.svg) no-repeat center/100%;
 }
 
+.footer > div:hover {
+    box-shadow: inset 1px 1px 5px 1px var(--accent-color),
+        inset -1px -1px 5px 1px var(--accent-color);
+}
+
 .selected {
-    text-decoration: underline 3px black;
+    text-decoration: underline 3px var(--accent-color);
+    font-weight: bold;
 }
 
 .main {
     flex: 1;
 
-    background-color: blueviolet;
+    background-color: #B88112;
     width: inherit;
     text-align: center;
 }
