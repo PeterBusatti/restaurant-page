@@ -12,7 +12,6 @@
 .content{
     display: flex;
     flex-direction: column;
-    align-items: center;
     
     width: 100vw;
     height: 100vh;
@@ -27,61 +26,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    
-
 }
 
-.tab {
-    width: 20%;
+h1 {
+    font-size: 2rem;
+    position: absolute;
+    left: 1rem;
+}
+
+ul {
+    width: 50%;
     height: inherit;
-    white-space: nowrap;
+    list-style: none;
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.header li {
+    height: inherit;
+    width: 33%;
     font-size: 1.5rem;
+    background-color: var(--hf-bg-color);
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.tab:hover {
-    box-shadow: 2px 0px 5px black,
-        -2px 0px 5px black;
+.header li:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5),
+        0px 0px 5px rgba(0, 0, 0, .5);
+    scale: 1.1;
 }
 
 .icon {
     position: absolute;
-    right: 0;
-
+    right: 1rem;
     width: 50px;
     background-color: #fff;
     height: inherit;
 }
 
-.footer > div {
+.footer li {
     height: 80%;
     width: 40px;
     border-radius: 30%;
 }
 
-.tab:hover, .footer > div:hover {
+li:hover {
     cursor: pointer;
 }
 
-.footer > div:first-child {
+.footer li:first-child {
     background: url(./facebook.svg) no-repeat center/100%;
 }
 
-.footer > div:nth-child(2) {
+.footer li:nth-child(2) {
     background: url(./instagram.svg) no-repeat center/100%;
 }
 
-.footer > div:last-child {
+.footer li:last-child {
     background: url(./twitter.svg) no-repeat center/100%;
 }
 
-.footer > div:hover {
-    box-shadow: inset 1px 1px 5px 1px var(--accent-color),
-        inset -1px -1px 5px 1px var(--accent-color);
+.footer li:hover {
+    box-shadow: inset 0px 0px 3px var(--accent-color),
+        0px 0px 3px var(--accent-color);
+    scale: 1.1;
 }
 
 .selected {
