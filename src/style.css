@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: column;
     
-    width: 100vw;
     height: 100vh;
 }
 
@@ -110,5 +109,33 @@ li:hover , .icon:hover {
 
     background-color: var(--main-bg-color);
     width: inherit;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.main > div {
+    width: 75%;
+    background-color: beige;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    margin: 1rem;
     text-align: center;
+    padding: .5rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 1rem;
+}
+
+.main img {
+    grid-column-start: 2;
+    grid-row: 1 / span 2;
+
+    height: 700px;
+}
+
+.main p {
+    align-self: start;
 }
