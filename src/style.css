@@ -114,6 +114,7 @@ li:hover , .icon:hover {
     justify-content: center;
 }
 
+/* home */
 .main > .home {
     width: 75%;
     background-color: beige;
@@ -139,3 +140,42 @@ li:hover , .icon:hover {
 .home p {
     align-self: start;
 }
+
+/* menu */
+.main > .menu {
+    width: 75%;
+    background-color: beige;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    margin: 1rem;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px ,1fr) );
+    gap: 2rem;
+}
+
+.menu .item {
+    height: 300px;
+    border: solid black 1px;
+    padding: .5rem;
+    font-size: 1rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .25rem;
+}
+
+.menu img {
+    height: inherit;
+    grid-row: 1 / span 2;
+}
+
+.item > p:last-child {
+    font-size: 2rem;
+    justify-self: end;
+    align-self: end;
+}
+
+
+
+/* contact */
