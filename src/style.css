@@ -115,10 +115,10 @@ li:hover , .icon:hover {
 }
 
 /* home */
-.main > .home {
+.home {
     width: 75%;
     background-color: beige;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     margin: 1rem;
     text-align: center;
     padding: .5rem 0;
@@ -142,15 +142,15 @@ li:hover , .icon:hover {
 }
 
 /* menu */
-.main > .menu {
+.menu {
     width: 75%;
     background-color: beige;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     margin: 1rem;
     padding: 2rem;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px ,1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(300px ,1fr));
     gap: 2rem;
 }
 
@@ -179,3 +179,34 @@ li:hover , .icon:hover {
 
 
 /* contact */
+.contact {
+    box-sizing: border-box;
+    width: 50%;
+    background-color: beige;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin: 1rem;
+    padding: 5rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact > div > p:nth-child(2n - 1) {
+    font-weight: bold;
+}
+
+.contact p {
+    display: block;
+    line-height: 2rem;
+    background-color: rgba(145, 145, 145, 0.1);
+}
+
+.contact h3 {
+    font-size: 1.5rem;
+    text-decoration: underline 2px;
+    margin: 0 0 -1.5rem 0;
+}
+
