@@ -52,3 +52,22 @@ contact :
     </div>
 </div>
 
+header :
+        <div class="header">
+            <h1>Hay Gourmet</h1>
+            <ul>
+                <li class="selected">Home</li>
+                <li>Menu</li>
+                <li>Contact</li>
+            </ul>
+            <div class="icon"></div>
+
+footer :
+        <div class="footer">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
