@@ -1,3 +1,5 @@
+
+
 function headerTabItems() {
     const ul = document.createElement("ul");
 
@@ -46,7 +48,7 @@ function createHeader() {
 function footerItems() {
     const ul = document.createElement("ul");
     
-    for(let i = 0; i > 3; i++) {
+    for(let i = 0; i < 3; i++) {
         const li = document.createElement("li");
         ul.appendChild(li);
     }
@@ -70,12 +72,15 @@ function createMain() {
     return main;
 }
 
-function pageLoad () {
-    const content = document.getElementById("content");
+function pageLoad() {
+    const content = document.createElement('div');
+    content.classList.add("content");
 
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+
+    document.body.appendChild(content);
 }
 
 
