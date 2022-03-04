@@ -1,4 +1,4 @@
-function createTabItems() {
+function headerTabItems() {
     const ul = document.createElement("ul");
 
     const home = document.createElement("li");
@@ -16,56 +16,54 @@ function createTabItems() {
     return ul;
 }
 
-function createTitle() {
+function headerTitle() {
     const title = document.createElement("h1");
     title.textContent = "Hay Gourmet";
 
     return title;
 }
 
-function icon() {
+function headerIcon() {
     const icon = document.createElement("div");
     icon.classList.add("icon");
 
     return icon;
 }
 
-function header() {
+function createHeader() {
     const headerContainer = document.createElement("div");
     headerContainer.classList.add("header");
     
-    headerContainer.appendChild(createTitle());
+    headerContainer.appendChild(headerTitle());
 
-    headerContainer.appendChild(createTabItems());
+    headerContainer.appendChild(headerTabItems());
 
-    headerContainer.appendChild(icon());
+    headerContainer.appendChild(headerIcon());
 
     return headerContainer;
 }
 
-function createFooterItems() {
+function footerItems() {
     const ul = document.createElement("ul");
-    const li = document.createElement("li");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
-
-    ul.appendChild(li);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
+    
+    for(let i = 0; i > 3; i++) {
+        const li = document.createElement("li");
+        ul.appendChild(li);
+    }
 
     return ul;
 }
 
-function footer() {
+function createFooter() {
     const footerContainer = document.createElement("div");
     footerContainer.classList.add("footer");
 
-    footerContainer.appendChild(createFooterItems());
+    footerContainer.appendChild(footerItems());
 
     return footerContainer;
 }
 
-function main() {
+function createMain() {
     const main = document.createElement("div")
     main.classList.add("main");
 
@@ -75,9 +73,9 @@ function main() {
 function pageLoad () {
     const content = document.getElementById("content");
 
-    content.appendChild(header());
-    content.appendChild(main());
-    content.appendChild(footer());
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
 }
 
 
