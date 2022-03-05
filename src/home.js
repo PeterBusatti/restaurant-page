@@ -2,22 +2,22 @@ import bunny from './images/guillermo-casales-0rgv5ydipU8-unsplash.jpg';
 
 const homeContent = (() => {
     const headline = () => {
-        const createHeadline = document.createElement("h2");
-        createHeadline.textContent = "Quality sourced ingredients shipped right to your door!";
-        return createHeadline;
+        const headline = document.createElement("h2");
+        headline.textContent = "Quality sourced ingredients shipped right to your door!";
+        return headline;
     }
 
     const text = () => {
-        const createText = document.createElement("p");
-        createText.textContent = "This is your one stop shop for your rabbit's nutritional needs.";
-        return createText;
+        const txt = document.createElement("p");
+        txt.textContent = "This is your one stop shop for your rabbit's nutritional needs.";
+        return txt;
     }
 
     const img = () => {
-        const createImg = document.createElement("img");
-        createImg.src = bunny;
-        createImg.alt = "rabbit eating from bowl";
-        return createImg;
+        const img = document.createElement("img");
+        img.src = bunny;
+        img.alt = "rabbit eating from bowl";
+        return img;
     }
 
     return {
@@ -27,8 +27,10 @@ const homeContent = (() => {
     }
 })();
 
-function loadHome() {
+function loadHome(){
     const main = document.querySelector(".main");
+    main.textContent = "";
+    
     const home = document.createElement("div");
     home.classList.add("home");
 
@@ -37,6 +39,8 @@ function loadHome() {
     home.appendChild(homeContent.img());
 
     main.appendChild(home);
+
+    const homeBtn = document.getElementById("home");
 }
 
 export {loadHome}

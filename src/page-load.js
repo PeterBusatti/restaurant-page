@@ -5,14 +5,18 @@ function headerTabItems() {
 
     const home = document.createElement("li");
     home.textContent = "Home";
+    home.setAttribute("id", "home");
+    home.classList.add("selected");
     ul.appendChild(home)
 
     const menu = document.createElement("li");
     menu.textContent = "Menu";
+    menu.setAttribute("id", "menu");
     ul.appendChild(menu)
 
     const contact = document.createElement("li");
     contact.textContent = "Contact";
+    contact.setAttribute("id", "contact");
     ul.appendChild(contact)
 
     return ul;

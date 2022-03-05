@@ -29,7 +29,7 @@ function createMenuItem(imageLocation, description, price) {
     return item;
 }
 
-const menu = (() => {
+const menuList = (() => {
     const fullMenu = [];
 
     const addToMenu = (...item) => {
@@ -45,7 +45,7 @@ const menu = (() => {
 })();
 
 /* add menu items here */
-menu.addToMenu(
+menuList.addToMenu(
     createMenuItem(bunny, 
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
     "12"),
@@ -61,16 +61,18 @@ menu.addToMenu(
     createMenuItem(bunny, 
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     15.99),
-)
+);
 
 
 
 function loadMenu() {
     const main = document.querySelector(".main");
+    main.textContent = "";
+    
     const menuElement = document.createElement("div");
     menuElement.classList.add("menu");
 
-    menu.fullMenu.forEach(item => {
+    menuList.fullMenu.forEach(item => {
         menuElement.appendChild(item);
     });
 

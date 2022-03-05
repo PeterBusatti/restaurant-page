@@ -55,8 +55,10 @@ const directonSection = (() => {
     }
 })();
 
-function loadContact () {
+function loadContact() {
     const main = document.querySelector(".main");
+    main.textContent = "";
+    
     const contactElement = document.createElement("div");
     contactElement.classList.add("contact");
 
