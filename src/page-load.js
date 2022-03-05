@@ -87,5 +87,6 @@ function pageLoad() {
     document.body.appendChild(content);
 }
 
+const tabs = () => document.querySelectorAll(".header li");
 
-export {pageLoad};
+export {pageLoad, tabs};
