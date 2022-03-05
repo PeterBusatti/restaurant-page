@@ -1,5 +1,3 @@
-
-
 function headerTabItems() {
     const ul = document.createElement("ul");
 
@@ -41,9 +39,7 @@ function createHeader() {
     headerContainer.classList.add("header");
     
     headerContainer.appendChild(headerTitle());
-
     headerContainer.appendChild(headerTabItems());
-
     headerContainer.appendChild(headerIcon());
 
     return headerContainer;
@@ -87,6 +83,6 @@ function pageLoad() {
     document.body.appendChild(content);
 }
 
-const tabs = () => document.querySelectorAll(".header li");
+const getTabs = () => document.querySelectorAll(".header li");
 
-export {pageLoad, tabs};
+export {pageLoad, getTabs};

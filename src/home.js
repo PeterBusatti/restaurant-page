@@ -39,8 +39,6 @@ function loadHome(){
     home.appendChild(homeContent.img());
 
     main.appendChild(home);
-
-    const homeBtn = document.getElementById("home");
 }
 
 export {loadHome}

@@ -1,5 +1,5 @@
 import './style.css';
-import {pageLoad, tabs} from './page-load.js';
+import {pageLoad, getTabs as tabs} from './page-load.js';
 import {loadHome} from './home.js';
 import {loadMenu} from './menu.js';
 import {loadContact} from './contact.js';
