@@ -18,7 +18,7 @@ function createMenuItem(imageLocation, description, price) {
 
     const costElement = () => {
         const element = document.createElement("p");
-        element.textContent = price;
+        element.textContent = "$" + price;
         return element;
     }
 
@@ -32,18 +32,36 @@ function createMenuItem(imageLocation, description, price) {
 const menu = (() => {
     const fullMenu = [];
 
-    const hay = createMenuItem(bunny, "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "$12");
-    const hay2 = createMenuItem(bunny, "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "$12");
-    const hay3 = createMenuItem(bunny, "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "$12");
-    const hay4 = createMenuItem(bunny, "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "$12");
-
-    fullMenu.push(hay, hay2, hay3, hay4);
+    const addToMenu = (...item) => {
+        item.forEach(item => {
+            fullMenu.push(item);
+        })
+    }
 
     return {
         fullMenu,
+        addToMenu,
     }    
 })();
 
+/* add menu items here */
+menu.addToMenu(
+    createMenuItem(bunny, 
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+    "12"),
+
+    createMenuItem(bunny,
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+    5),
+
+    createMenuItem(bunny,
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    13.4),
+    
+    createMenuItem(bunny, 
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    15.99),
+)
 
 
 
