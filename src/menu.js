@@ -1,6 +1,6 @@
 import bunny from './images/guillermo-casales-0rgv5ydipU8-unsplash.jpg';
 
-function createMenuItem(imageLocation, description, price) {
+function createMenuItem(imageLocation, title, description, price) {
     const item = document.createElement("div");
     item.classList.add("item");
     
@@ -8,6 +8,12 @@ function createMenuItem(imageLocation, description, price) {
         const element = document.createElement("img");
         element.src = imageLocation;
         return element; 
+    }
+
+    const titleElement = () => {
+        const element = document.createElement("p");
+        element.textContent = title;
+        return element;
     }
 
     const descriptElement = () => {
@@ -23,6 +29,7 @@ function createMenuItem(imageLocation, description, price) {
     }
 
     item.appendChild(imageElement());
+    item.appendChild(titleElement());
     item.appendChild(descriptElement());
     item.appendChild(costElement());
 
@@ -47,20 +54,24 @@ const menuList = (() => {
 /* add menu items here */
 menuList.addToMenu(
     createMenuItem(bunny, 
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-    "12"),
+        "Timothy Hay",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+        "12"),
 
-    createMenuItem(bunny,
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-    5),
-
-    createMenuItem(bunny,
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    13.4),
-    
     createMenuItem(bunny, 
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    15.99),
+        "Timothy Hay",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+        "12"),
+        
+    createMenuItem(bunny, 
+        "Timothy Hay",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+        "12"),
+
+    createMenuItem(bunny, 
+        "Timothy Hay",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+        "12"),
 );
 
 

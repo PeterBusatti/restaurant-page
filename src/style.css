@@ -156,18 +156,29 @@ li:hover , .icon:hover {
 
 .menu .item {
     height: 300px;
-    border: solid black 1px;
     padding: .5rem;
     font-size: 1rem;
+    border: double 10px black;
 
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: .25rem;
+    grid-template-rows: auto 1fr auto;
+
+    place-items: center;
+    text-align: center;
 }
 
 .menu img {
-    height: inherit;
-    grid-row: 1 / span 2;
+    height: 250px;
+    grid-row: 2 / span 2;
+}
+
+.item > p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline 2px rgba(0,0,0, .33);
+    grid-row-start: 1;
+    grid-column: 1 / span 2;
 }
 
 .item > p:last-child {
