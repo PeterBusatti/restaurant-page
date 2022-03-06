@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,6 +7,7 @@
 
 :root {
     --accent-color: #18F58C;
+    --darker-accent-color: rgb(102, 187, 102);
     --main-bg-color: #C25100;
     --hf-bg-color: #F5AC18;
 }
@@ -14,6 +17,7 @@
     flex-direction: column;
     
     height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header, .footer {
@@ -28,9 +32,14 @@
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     position: absolute;
-    left: 1rem;
+    left: .5rem;
+    bottom: 1px;
+    -webkit-text-fill-color: var(--darker-accent-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -150,7 +159,7 @@ li:hover , .icon:hover {
     padding: 2rem;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px ,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px ,1fr));
     gap: 2rem;
 }
 
@@ -169,24 +178,64 @@ li:hover , .icon:hover {
 }
 
 .menu img {
-    height: 250px;
+    height: 270px;
     grid-row: 2 / span 2;
 }
 
 .item > p:first-of-type {
     font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: underline 2px rgba(0,0,0, .33);
+    text-decoration: underline 2px rgba(0,0,0, .5);
     grid-row-start: 1;
     grid-column: 1 / span 2;
 }
 
-.item > p:last-child {
+.item > button {
+    position: relative;
     font-size: 1.5rem;
+    background-color: var(--darker-accent-color);
+    border-radius: 15px;
+    border: none;
+    padding: 0px .5rem;
+    width: 130px;
+    
+    
     justify-self: end;
     align-self: end;
 }
+/*
+.item > button:hover {
+    scale: 1.1;
+}
 
+.item > button:hover::before {
+    position: absolute;
+    content: "Add To Cart";
+    font-size: 1rem;
+    top: -18px;
+    left: 5px;
+    background-color: var(--hf-bg-color); 
+}
+*/
+
+.item > button:hover {
+    scale: 1.05;
+    color: var(--darker-accent-color);
+    box-shadow: inset 0px 0px 3px var(--accent-color),
+        0px 0px 3px var(--accent-color);
+}
+
+.item > button:hover::before {
+    position: absolute;
+    content: "Add To Cart";
+    font-size: 1.2rem;
+    background-color: var(--darker-accent-color); 
+    color: black;
+    top: 3px;
+    left: 13px;
+    border-radius: 15px;
+    
+}
 
 
 /* contact */

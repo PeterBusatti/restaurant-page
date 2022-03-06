@@ -23,7 +23,7 @@ function createMenuItem(imageLocation, title, description, price) {
     }
 
     const costElement = () => {
-        const element = document.createElement("p");
+        const element = document.createElement("button");
         element.textContent = "$" + price;
         return element;
     }
@@ -56,22 +56,22 @@ menuList.addToMenu(
     createMenuItem(bunny, 
         "Timothy Hay",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-        "12"),
+        "1.99"),
 
     createMenuItem(bunny, 
         "Timothy Hay",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-        "12"),
-        
-    createMenuItem(bunny, 
-        "Timothy Hay",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-        "12"),
+        "12.00"),
 
     createMenuItem(bunny, 
         "Timothy Hay",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
-        "12"),
+        "25.50"),
+
+    createMenuItem(bunny, 
+        "Timothy Hay",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit", 
+        "11.12"),
 );
 
 
