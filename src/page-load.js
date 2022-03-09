@@ -1,3 +1,9 @@
+import bunnyIcon from './images/rabbit-7040066.svg'
+import facebookIcon from './images/facebook.svg'
+import instagramIcon from './images/instagram.svg'
+import twitterIcon from './images/twitter.svg'
+
+
 function headerTabItems() {
     const ul = document.createElement("ul");
 
@@ -30,6 +36,7 @@ function headerTitle() {
 function headerIcon() {
     const icon = document.createElement("div");
     icon.classList.add("icon");
+    icon.style.background = `rgba(0, 0, 0, .75) url(${bunnyIcon}) no-repeat center`;
 
     return icon;
 }
@@ -48,10 +55,17 @@ function createHeader() {
 function footerItems() {
     const ul = document.createElement("ul");
     
-    for(let i = 0; i < 3; i++) {
-        const li = document.createElement("li");
-        ul.appendChild(li);
-    }
+    const facebook = document.createElement("li")
+    facebook.style.background = `url(${facebookIcon}) no-repeat center/100%`;
+    ul.appendChild(facebook);
+
+    const instagram = document.createElement("li")
+    instagram.style.background = `url(${instagramIcon}) no-repeat center/100%`;
+    ul.appendChild(instagram);
+
+    const twitter = document.createElement("li")
+    twitter.style.background = `url(${twitterIcon}) no-repeat center/100%`;
+    ul.appendChild(twitter);
 
     return ul;
 }
