@@ -215,12 +215,13 @@ li:hover , .icon:hover {
 /* contact */
 .contact {
     box-sizing: border-box;
-    width: 50%;
+    width: min(90%, 1200px);
     background-color: beige;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     margin: 1rem;
-    padding: 5rem;
+    padding: calc(1rem + 5vw);
     text-align: center;
+    
 
     display: flex;
     flex-direction: column;
